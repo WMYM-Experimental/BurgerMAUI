@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WashingtonYandun_Hamburguesas.Views.BurgerLIstPage"
+             xmlns:models="clr-namespace:WashingtonYandun_Hamburguesas.Models"
+             Title="BurgerLIstPage">
+    <Grid
+        RowDefinitions="*,Auto">
+        <CollectionView
+            x:Name="burgerList">
+            <CollectionView.ItemTemplate>
+                <DataTemplate
+                    x:DataType="models:Burger">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition
+                                Width="*" />
+                            <ColumnDefinition
+                                Width="2*" />
+                        </Grid.ColumnDefinitions>
+                        <Label
+                            Text="{Binding Id}" />
+                        <Label
+                            Grid.Column="1"
+                            Text="{Binding Name}" />
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        <Button
+            Grid.Row="1"
+            Text="Añadir nuevo registro"
+            Clicked="OnItemAdded"
+            Margin="20"/>
+    </Grid>
+</ContentPage>
