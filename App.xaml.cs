@@ -4,12 +4,12 @@ namespace WashingtonYandun_Hamburguesas;
 
 public partial class App : Application
 {
-	public static BurgerDatabase BurgerRepo { get; set; }
-	public App(BurgerDatabase repo)
+    public static BurgerDatabase_wy Repository_wy { get; private set; }
+    public App(BurgerDatabase_wy repo)
 	{
 		InitializeComponent();
 
 		MainPage = new AppShell();
-		BurgerRepo = repo;
+		Repository_wy = repo;
     }
 }

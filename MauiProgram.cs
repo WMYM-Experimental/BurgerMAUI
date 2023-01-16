@@ -15,15 +15,9 @@ public static class MauiProgram
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
 			});
 
-        static string GetLocalFilePath(string filename)
-        {
-            return System.IO.Path.Combine(FileSystem.AppDataDirectory, filename);
-        }
-
-        string dbPath = GetLocalFilePath("burger.db3");
-        builder.Services.AddSingleton<BurgerDatabase>(
-			s => ActivatorUtilities.CreateInstance<BurgerDatabase>(s, dbPath)
-			);
+        string dbPath = FileAccessHelper.GetLocalFilePath("burger.db3");
+        builder.Services.AddSingleton<BurgerDatabase_wy>(s => ActivatorUtilities.CreateInstance<BurgerDatabase_wy>(s, dbPath));
+		
         return builder.Build();
 	}
 }

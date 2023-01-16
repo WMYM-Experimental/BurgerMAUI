@@ -54,10 +54,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="Views\BurgerItemPage.xaml">
+	  <MauiXaml Update="Views\BurgerItemPage_wy.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\BurgerLIstPage.xaml">
+	  <MauiXaml Update="Views\BurgerListPage_wy.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

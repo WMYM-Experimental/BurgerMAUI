@@ -7,14 +7,14 @@
     xmlns:views="clr-namespace:WashingtonYandun_Hamburguesas.Views"
     Shell.FlyoutBehavior="Disabled">
 
-    
     <ShellContent
         Title="Add"
-        ContentTemplate="{DataTemplate views:BurgerItemPage}"
-        Route="BurgerItemPage" />
+        ContentTemplate="{DataTemplate views:BurgerItemPage_wy}"
+        Route="BurgerItemPage_wy" />
+
     <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate views:BurgerLIstPage}"
-        Route="BurgerLIstPage" />
+        Title="BurgerList"
+        ContentTemplate="{DataTemplate views:BurgerListPage_wy}"
+        Route="BurgerListPage_wy" />
 
 </Shell>
