@@ -37,18 +37,18 @@
                 HorizontalOptions="Center"
                 Spacing="10">
                 <Button
-                    Text="Delete" 
+                    Text="Return"
+                    x:Name="btnReturn"
                     FontAttributes="Bold"
                     WidthRequest="120"
-                    Clicked="DeleteBurgerDB"
-                    CornerRadius="20"
+                    Clicked="ReturnTo"
                     />
                 <Button
                     Text="Save"
                     FontAttributes="Bold"
                     WidthRequest="120"
                     Clicked="OnSaveClicked" 
-                    CornerRadius="20"/>
+                    BackgroundColor="#606c38"/>
             </HorizontalStackLayout>
         </VerticalStackLayout>
     </ScrollView>

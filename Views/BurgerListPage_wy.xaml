@@ -36,10 +36,10 @@
             <Button
                 Grid.Column="1"
                 Grid.Row="0"
-                Text="Buscar" 
+                Text="Search"
+                BackgroundColor="#606c38"
                 FontAttributes="Bold"
                 Margin="20"
-                CornerRadius="20"
                 HeightRequest="40"
                 Clicked="SearchBurger"
                 Padding="0"/>
@@ -48,7 +48,7 @@
             HorizontalOptions="Center" 
             Grid.Row="1"
             x:Name="msg_wy"
-            Text="Any Elemnts"
+            Text="Any Elements available"
             IsVisible="false"/>
         <CollectionView 
             Grid.Row="1"

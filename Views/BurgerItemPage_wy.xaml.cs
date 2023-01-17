@@ -88,4 +88,12 @@ public partial class BurgerItemPage_wy : ContentPage
             nameof(BurgerListPage_wy)
             );
     }
+
+    private async void ReturnTo(object sender, EventArgs e)
+    {
+        await Shell.Current.GoToAsync(
+            nameof(BurgerListPage_wy)
+            );
+    }
+
 }

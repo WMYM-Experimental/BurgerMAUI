@@ -24,7 +24,7 @@ public partial class BurgerListPage_wy : ContentPage
 
     public async void OnItemAdded(object sender, EventArgs e)
     {
-        await Shell.Current.GoToAsync("BurgerItemPage_wy");
+        await Shell.Current.GoToAsync("..");
     }
 
     public void SearchBurger(object sender, EventArgs e)
@@ -84,7 +84,7 @@ public partial class BurgerListPage_wy : ContentPage
         {
             btnDelete_wy.IsEnabled = true;
             btnDelete_wy.IsVisible = true;
-            
+
             if (searched)
             {
                 List<Burger_wy> burger = App.Repository_wy.GetBurgersByName(search_wy.Text);
@@ -127,7 +127,7 @@ public partial class BurgerListPage_wy : ContentPage
             "Empty list?",
             "No",
             "Yes");
-        
+
         if (!res)
         {
             App.Repository_wy.EmptyList();
@@ -147,7 +147,7 @@ public partial class BurgerListPage_wy : ContentPage
 
     private void OnPressed(object sender, EventArgs e)
     {
-        btnAdd_wy.BackgroundColor = Color.FromArgb("#FF0000");
+        btnAdd_wy.BackgroundColor = Color.FromArgb("#283618");
     }
 
     private void OnReleased(object sender, EventArgs e)

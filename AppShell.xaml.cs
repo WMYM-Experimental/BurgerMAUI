@@ -1,4 +1,6 @@
-﻿namespace WashingtonYandun_Hamburguesas;
+﻿using WashingtonYandun_Hamburguesas.Views;
+
+namespace WashingtonYandun_Hamburguesas;
 
 public partial class AppShell : Shell
 {
@@ -6,14 +8,15 @@ public partial class AppShell : Shell
 	{
 		InitializeComponent();
         
-        Routing.RegisterRoute(nameof(
-            Views.BurgerItemPage_wy),
-            typeof(Views.BurgerItemPage_wy)
+        Routing.RegisterRoute(
+            nameof(BurgerListPage_wy),
+            typeof(BurgerListPage_wy)
+            );
+
+        Routing.RegisterRoute(
+            nameof(BurgerItemPage_wy),
+            typeof(BurgerItemPage_wy)
             );
         
-        Routing.RegisterRoute(
-            nameof(Views.BurgerListPage_wy),
-            typeof(Views.BurgerListPage_wy)
-            );
     }
 }
