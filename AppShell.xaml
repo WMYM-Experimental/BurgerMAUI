@@ -8,12 +8,12 @@
     Shell.FlyoutBehavior="Disabled">
 
     <ShellContent
-        Title="Add"
+        Title="BurgerItemPage_wy"
         ContentTemplate="{DataTemplate views:BurgerItemPage_wy}"
         Route="BurgerItemPage_wy" />
 
     <ShellContent
-        Title="BurgerList"
+        Title="BurgerListPage_wy"
         ContentTemplate="{DataTemplate views:BurgerListPage_wy}"
         Route="BurgerListPage_wy" />
 

@@ -40,7 +40,6 @@
                     Text="Delete" 
                     FontAttributes="Bold"
                     WidthRequest="120"
-                    BackgroundColor="#ff2233"
                     Clicked="DeleteBurgerDB"
                     CornerRadius="20"
                     />

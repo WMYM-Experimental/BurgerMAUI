@@ -19,7 +19,6 @@
                     Grid.Column="0"
                     Grid.Row="0"
                     x:Name="search_wy" 
-                    Placeholder="Search by name"
                     HeightRequest="40"
                     TextChanged="ChangeCurrentText"
                     Grid.ColumnSpan="3"/>
@@ -72,10 +71,8 @@
                                 <Label
                                     Text="{Binding Id}" 
                                     HorizontalOptions="Center" 
-                                    FontAttributes="Bold"
-                                    TextColor="#222222"/>
+                                    FontAttributes="Bold"/>
                                 <Label 
-                                    TextColor="#222222"
                                     FontSize="30" 
                                     VerticalOptions="Center"
                                     HorizontalOptions="Center"
@@ -107,12 +104,6 @@
                                     IsEnabled="false"/>
                             </Grid>
                         </Grid>
-                        <BoxView 
-                            Color="White"
-                            HeightRequest="20"/>
-                        <BoxView 
-                            Color="#222222"
-                            HeightRequest="1"/>
                     </VerticalStackLayout>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
@@ -121,29 +112,26 @@
             Grid.Row="2" 
             ColumnDefinitions="*" 
             BackgroundColor="#e6e6e6">
-            <VerticalStackLayout 
-                Grid.Row="0" 
-                Grid.Column="0"
-                Spacing="5"
-                Margin="20">
+            <VerticalStackLayout
+                VerticalOptions="Center"
+                Spacing="5">
                 <Button 
                     Pressed="OnPressed"
                     Released="OnReleased"
-                    BackgroundColor="Purple"
                     x:Name="btnAdd_wy"
                     Text="Add new"
                     HorizontalOptions="Center"
                     WidthRequest="200"
                     Clicked="OnItemAdded" 
                     FontAttributes="Bold"
-                    Margin="0"
-                    CornerRadius="20"/>
+                    HeightRequest="40"
+                    BackgroundColor="#606c38"
+                    Margin="0"/>
                 <Button 
                     x:Name="btnEmpty_wy"
-                    BackgroundColor="#e6e6e6"
                     Text="Empty list"
-                    TextColor="Purple"
-                    WidthRequest="180"
+                    WidthRequest="200"
+                    HeightRequest="40"
                     Padding="0"
                     BorderWidth="0"
                     FontSize="12"

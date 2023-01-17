@@ -22,9 +22,9 @@ public partial class BurgerListPage_wy : ContentPage
         }
     }
 
-    async void OnItemAdded(object sender, EventArgs e)
+    public async void OnItemAdded(object sender, EventArgs e)
     {
-        await Shell.Current.GoToAsync(nameof(BurgerItemPage_wy));
+        await Shell.Current.GoToAsync("BurgerItemPage_wy");
     }
 
     public void SearchBurger(object sender, EventArgs e)
@@ -102,12 +102,12 @@ public partial class BurgerListPage_wy : ContentPage
     }
 
 
-    private async void Selection(object sender, SelectionChangedEventArgs e)
+    private void Selection(object sender, SelectionChangedEventArgs e)
     {
         if (e.CurrentSelection.Count != 0)
         {
             Burger_wy burger = (Burger_wy)e.CurrentSelection[0];
-            await Shell.Current.GoToAsync(
+            Shell.Current.GoToAsync(
                 $"{nameof(BurgerItemPage_wy)}?{nameof(BurgerItemPage_wy.ItemId)}={burger.Id}"
                 );
 

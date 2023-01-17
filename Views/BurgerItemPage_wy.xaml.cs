@@ -39,7 +39,9 @@ public partial class BurgerItemPage_wy : ContentPage
             }
             else
             {
-                await Shell.Current.GoToAsync("..");
+                await Shell.Current.GoToAsync(
+                    nameof(BurgerListPage_wy)
+                    );
             }
 
         }
@@ -51,18 +53,24 @@ public partial class BurgerItemPage_wy : ContentPage
                 aux.Description_wy,
                 aux.WithExtraCheese_wy
                 );
-            await Shell.Current.GoToAsync("..");
+            await Shell.Current.GoToAsync(
+                nameof(BurgerListPage_wy)
+                );
         }
     }
 
     private void OnCancelClicked(object sender, EventArgs e)
     {
-        Shell.Current.GoToAsync("..");
+        Shell.Current.GoToAsync(
+            nameof(BurgerListPage_wy)
+            );
+        return;
     }
 
     private void OnCheckBoxCheckedChanged(object sender, CheckedChangedEventArgs e)
     {
         _flag = e.Value;
+        return;
     }
 
     private void GetCurrentBurger(int Id)
@@ -76,6 +84,8 @@ public partial class BurgerItemPage_wy : ContentPage
     private async void DeleteBurgerDB(object sender, EventArgs e)
     {
         App.Repository_wy.DeleteBurger(aux.Id);
-        await Shell.Current.GoToAsync("..");
+        await Shell.Current.GoToAsync(
+            nameof(BurgerListPage_wy)
+            );
     }
 }
